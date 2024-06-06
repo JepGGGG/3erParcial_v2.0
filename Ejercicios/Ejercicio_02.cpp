@@ -1,34 +1,45 @@
 #include <iostream>
+
 using namespace std;
-int main(){
-	int n[5], mayor ,menor ,repe ,i ;
 
-	for(i=0;i<5;i++){
-		cout << "Numero " << i+1 << endl;
-		cin >> n[i];
-	}
+int main() {
+    int numeros[5];
+    int mayor, menor;
+    bool hayRepetidos = false;
 
-    mayor = n[0];
-    menor = n[0];
-    repe = n[0];
+	
+    cout << "Ingrese 5 numeros separados por espacios:\n"; 
 
-	for(i=0;i<5;i++){
-		if(n[i]>mayor){
-			mayor=n[i];
-		}
+    for (int i = 0; i < 5; i++) {
+        cout << "Numero " << i + 1 << ": ";
+        cin >> numeros[i];
+    }
+    mayor = numeros[0];
+    menor = numeros[0];
 
-		if(n[i]<menor){
-			menor=n[i];
-		}
+    for (int i = 1; i < 5; i++) {
+        if (numeros[i] > mayor) {
+            mayor = numeros[i];
+        }
+        if (numeros[i] < menor) {
+            menor = numeros[i];
+        }
 
-		if(n[i]==repe){
-			repe=n[i];
-		}
-	}
+        for (int j = 0; j < i; j++) {
+            if (numeros[i] == numeros[j]) {
+                hayRepetidos = true;
+                cout << "Numero repetido: " << numeros[i] << endl;
+                break;
+            }
+        }
+    }
 
+    cout << "El numero mayor es: " << mayor << endl;
+    cout << "El numero menor es: " << menor << endl;
+    if (!hayRepetidos) {
+        cout << "No hay numeros repetidos.\n";
+    }
 
-
-	cout << "El numero mayor es: " << mayor << endl;
-	cout << "El numero menor es: " << menor << endl;
-	cout << "Numeros repetidos: " << repe << endl;
+    return 0;
 }
+
