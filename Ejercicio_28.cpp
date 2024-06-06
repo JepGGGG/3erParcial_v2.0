@@ -15,7 +15,7 @@ int main() {
         cout << "Ingrese su contraseña: ";
         cin >> Acceso_Sistema;
 
-        if (strcmp(Usuario_Trabajador, "JepG") == 0 && strcmp(Acceso_Sistema, "2b321) == 0) {
+        if (strcmp(Usuario_Trabajador, "JepG") == 0 && strcmp(Acceso_Sistema,"2b31") == 0) {
             cout << "Entraste!\n";
             break;
         } else {
