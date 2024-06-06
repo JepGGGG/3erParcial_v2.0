@@ -1,7 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
     {
       "name": "(Windows) Launch",
       "type": "cppvsdbg",
@@ -16,7 +15,7 @@
     {
       "name": "(Windows) Attach",
       "type": "cppvsdbg",
-      "request": "attach",
+      "request": "attach"
     },
     {
       "name": "(gdb) Pipe Launch",
@@ -36,16 +35,16 @@
       },
       "MIMode": "gdb",
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -62,16 +61,16 @@
       },
       "MIMode": "gdb",
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -87,16 +86,16 @@
       "MIMode": "gdb",
       "miDebuggerPath": "/path/to/gdb",
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -112,20 +111,22 @@
       "pipeTransport": {
         "debuggerPath": "/usr/bin/gdb",
         "pipeProgram": "${env:windir}\\system32\\bash.exe",
-        "pipeArgs": ["-c"],
+        "pipeArgs": [
+          "-c"
+        ],
         "pipeCwd": ""
       },
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -137,20 +138,22 @@
       "pipeTransport": {
         "debuggerPath": "/usr/bin/gdb",
         "pipeProgram": "${env:windir}\\system32\\bash.exe",
-        "pipeArgs": ["-c"],
+        "pipeArgs": [
+          "-c"
+        ],
         "pipeCwd": ""
       },
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -161,16 +164,16 @@
       "MIMode": "gdb",
       "miDebuggerPath": "/path/to/gdb",
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -180,8 +183,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/jesus/Desktop/RepoTercerParcial",
-      "program": "c:/Users/jesus/Desktop/RepoTercerParcial/build/Debug/outDebug",
+      "cwd": "c:/Users/jesus/Desktop/RepoTercerParcial/Ejercicios",
+      "program": "c:/Users/jesus/Desktop/RepoTercerParcial/Ejercicios/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
