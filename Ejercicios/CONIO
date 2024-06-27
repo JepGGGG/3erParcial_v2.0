@@ -1,0 +1,107 @@
+#include <iostream>
+#include <cmath>
+#include <conio.h>
+#include <windows.h> // Para usar SetConsoleTextAttribute
+
+using namespace std;
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
+int main() {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); // Para manipular colores
+
+    while (true) {
+        int opcion = 1;
+        double area;
+        bool selected = false;
+
+        while (!selected) {
+            system("cls");
+
+            cout << "Seleccione una figura para calcular el area:" << endl;
+
+            // Colores para el menú
+            SetConsoleTextAttribute(hConsole, opcion == 1 ? 11 : 7); // Azul claro/Blanco
+            cout << (opcion == 1 ? "> " : "  ") << "1. Circulo" << endl;
+
+            SetConsoleTextAttribute(hConsole, opcion == 2 ? 12 : 7); // Rojo/Blanco
+            cout << (opcion == 2 ? "> " : "  ") << "2. Rectangulo" << endl;
+
+            SetConsoleTextAttribute(hConsole, opcion == 3 ? 10 : 7); // Verde/Blanco
+            cout << (opcion == 3 ? "> " : "  ") << "3. Triangulo" << endl;
+
+            SetConsoleTextAttribute(hConsole, opcion == 4 ? 14 : 7); // Amarillo/Blanco
+            cout << (opcion == 4 ? "> " : "  ") << "4. Cuadrado" << endl;
+
+            SetConsoleTextAttribute(hConsole, opcion == 5 ? 13 : 7); // Magenta/Blanco
+            cout << (opcion == 5 ? "> " : "  ") << "5. Salir" << endl;
+
+            SetConsoleTextAttribute(hConsole, 7); // Restablecer color
+
+            int key = _getch();
+
+            if (key == 224) {
+                key = _getch();
+                if (key == 72) {
+                    if (opcion > 1) {
+                        opcion--;
+                    }
+                } else if (key == 80) {
+                    if (opcion < 5) {
+                        opcion++;
+                    }
+                }
+            } else if (key == 13) {
+                selected = true;
+            }
+        }
+
+        system("cls");
+
+        // Colores para los mensajes
+        SetConsoleTextAttribute(hConsole, 11); // Azul claro
+
+        switch (opcion) {
+            case 1: { 
+            float base, altura;
+            cout << "Base del triángulo: ";
+            cin >> base;
+            cout << "Altura del triángulo: ";
+            cin >> altura;
+            area = base * altura / 2;
+            break;
+        }
+        case 2: { 
+            float baseMayor, baseMenor, altura;
+            cout << "Base mayor del trapecio: ";
+            cin >> baseMayor;
+            cout << "Base menor del trapecio: ";
+            cin >> baseMenor;
+            cout << "Altura del trapecio: ";
+            cin >> altura;
+            area = (baseMayor + baseMenor) * altura / 2;
+            break;
+        }
+        case 3: { 
+            float base, altura;
+            cout << "Base del rectángulo: ";
+            cin >> base;
+            cout << "Altura del rectángulo: ";
+            cin >> altura;
+            area = base * altura;
+            break;
+        }
+        case 4: { 
+            float radio;
+            cout << "Radio del círculo: ";
+            cin >> radio;
+            area = M_PI * pow(radio, 2); 
+            break;
+        }
+
+        }
+    }
+    return 0;
+}
